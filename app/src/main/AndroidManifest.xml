@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permisos necesarios -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Icfes"
+        tools:targetApi="31">
+        <activity
+            android:name=".teacher.logout.TeacherLoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".teacher.logout.TeacherRegistroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".student.duelo.DuelICFESActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes" />
+        <activity
+            android:name=".student.logout.StudentRegistroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".student.logout.StudentLoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="MissingClass" /> <!-- ✅ SPLASH COMO ACTIVIDAD PRINCIPAL -->
+        <activity
+            android:name=".auth.SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- ✅ ACTIVIDADES DE AUTENTICACIÓN -->
+        <activity
+            android:name=".auth.UserTypeSelectionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="Instantiatable" /> <!-- ✅ ACTIVIDADES DE ESTUDIANTES -->
+        <activity
+            android:name=".student.StudentMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="Instantiatable" /> <!-- ✅ ACTIVIDADES DE PROFESORES -->
+        <activity
+            android:name=".teacher.TeacherMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Icfes"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name=".teacher.practice_evaluation.TeacherContentManagerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes" />
+
+        <activity
+            android:name=".teacher.practice_evaluation.ModuleEditorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes" />
+        <activity android:name=".teacher.duelo.TeacherDuelBankActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes" />
+        <activity
+            android:name=".student.premium.StudentTeacherContentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes" />
+        <activity
+        android:name=".student.premium.PremiumQuizActivity"
+        android:exported="false"
+        android:theme="@style/Theme.Icfes" />
+
+        <activity
+            android:name=".teacher.practice_evaluation.QuestionCreatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".teacher.simulation.TeacherSimulationManagerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes" />
+
+        <activity
+            android:name=".student.StudentICFESActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Icfes"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:label="ICFES Saber 11 - Sistema Avanzado" />
+    </application>
+
+</manifest>
